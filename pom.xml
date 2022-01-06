@@ -98,13 +98,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>Mithun Technologies Releases Nexus Repository</name>
-	      <url>http://13.232.37.136:8393/nexus/repository/viratrelease/</url>
+	      <url>http://3.110.106.247:8393/nexus/repository/viratrelease/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Mithun Technologies Snapshot Nexus Repository </name>
-	      <url>http://13.232.37.136:8393/nexus/repository/viratsnapshot/</url>
+	      <url>http://3.110.106.247:8393/nexus/repository/viratsnapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
