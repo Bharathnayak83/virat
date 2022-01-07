@@ -1,1 +1,32 @@
+node
+{
+ def mavenHome = tool name: "maven 3.8.4"
+  
+ stage('CheckOutCode')
+{
+  git branch: 'main', url: ''
+}
+stage('Build')
+{
+  sh "${mavenHome}/bin/mvn clean package"   
+}
+stage('sonar')
+{ 
+sh "${mavenHome}/bin/mvn clean sonar:sonar"
+}
+stage('nexux')
+{
+    sh "${mavenHome}/bin/mvn clean deploy" 
+}
+stage('tomcat')
+{
+sshagent(['b651b324-1890-49b9-8dba-7a9afb167d13']) 
+{
+sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@3.108.228.107:/opt/apache-tomcat-9.0.54/webapps"    
+}
+}
+
+}
+    
+
 
