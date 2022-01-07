@@ -22,7 +22,7 @@ stage('nexux')
 
 stage('tomcat')
 {
-sshagent(['e0602e05-2251-4469-bad8-1a4f73b2c32e'])
+sshagent(['e76428f5-790d-4057-b964-734199396dd4'])
 {
  sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@3.110.30.206:/opt/apache-tomcat-9.0.56/webapps" 
 }
