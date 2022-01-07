@@ -4,7 +4,7 @@ node
   
  stage('CheckOutCode')
 {
-  git branch: 'main', url: ''
+  git branch: 'main', url: 'git 'https://github.com/Bharathnayak83/virat.git'
 }
 stage('Build')
 {
